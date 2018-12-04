@@ -2,8 +2,7 @@ package com.model;
 
 public class Convertidor {
 
-    private Fahrenheit gradosf= new Fahrenheit();
-    private Celsius gradosc= new Celsius();
+
     private double numeroinicial;
     private double resultado;
     private String unidadinicial;
@@ -17,6 +16,8 @@ public class Convertidor {
     }
 
     public double convertirGrado(){
+        Fahrenheit gradosf= new Fahrenheit();
+        Celsius gradosc= new Celsius();
         resultado = 0;
         if(unidadinicial.equals("Fahrenheit") && unidadfinal.equals("Celsius")){
             resultado = Math.ceil(gradosc.convertirgrados(numeroinicial));
@@ -29,14 +30,6 @@ public class Convertidor {
         System.out.println(resultado);
         return resultado;
 
-    }
-
-    public Fahrenheit getGradosf() {
-        return gradosf;
-    }
-
-    public Celsius getGradosc() {
-        return gradosc;
     }
 
     public double getNumeroinicial() {
